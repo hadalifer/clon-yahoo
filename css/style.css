@@ -1,0 +1,16 @@
+section{
+    background-color: aquamarine;
+    padding: 10px;
+    display: flex;/* esto es para hacer que el contenedor sea flexible */
+    gap: 10px;/* es para crear espacio entre los items sin generar mas espacio en los margenes del contenedor */
+    flex-direction:row-reverse ;/* es para cambiar la direccion de hacia a donde se van a alinear los items  */
+    flex-wrap: wrap;/* esto es para que no se ajuste el tamaño del item y si no caben se pase a la siguiente fila o columna; */ 
+  /*  flex-flow: row-reverse wrap-reverse; esro es para en lugar de escribir las dos lineas de arriba solo escribas una */
+ 
+div{
+    background-color: green;
+    border-radius: 5px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+}
