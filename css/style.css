@@ -1,16 +1,83 @@
-section{
-    background-color: aquamarine;
-    padding: 10px;
-    display: flex;/* esto es para hacer que el contenedor sea flexible */
-    gap: 10px;/* es para crear espacio entre los items sin generar mas espacio en los margenes del contenedor */
-    flex-direction:row-reverse ;/* es para cambiar la direccion de hacia a donde se van a alinear los items  */
-    flex-wrap: wrap;/* esto es para que no se ajuste el tamaño del item y si no caben se pase a la siguiente fila o columna; */ 
-  /*  flex-flow: row-reverse wrap-reverse; esro es para en lugar de escribir las dos lineas de arriba solo escribas una */
- 
-div{
-    background-color: green;
-    border-radius: 5px;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
+:root{
+ --color-negro:#232a31;
+ --color-azul: #1a0dab;
+ --color-gris: #525252;
+ --color-gris-5b: #5252525b;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header{
+    height: 60px;
+    width: 100%;
+    padding:10px 10px ;
+    display: flex;
+    justify-content: space-between;
+}
+header nav{
+   display: flex;
+   column-gap: 20px;
+    
+}
+/* diseño de main
+===================================*/
+main{
+    text-align: center;
+    width: 600px;
+    align-self: center;
+}
+main .header h2{
+    font-weight: normal;
+    font-size: 40px;
+    color: var(--color-negro);
+    margin-bottom: 15px;
+}
+main .header p{
+    color: var(--color-negro);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+main .header a {
+    color: var(--color-azul);
+    font-size: 14px;
+    font-weight: bold;
+}
+main .header a:hover{
+    text-decoration: underline;
+}
+main .buscador label{
+    display:flex;
+    align-items: center;
+    width: 100%;
+    column-gap: 15px;
+    padding: 10px 15px;
+    border:1px solid var(--color-gris-5b) ;
+    box-shadow: 0 1px 1px var(--color-gris-5b);
+    border-radius: 100px;
+}
+main .buscador label:hover{
+    box-shadow: 0 1px 6px var(--color-gris-5b);
+}
+main .buscador input{
+    flex-grow: 1;/* para que este aproveche todo el espacio necesario */
+    border: none;
+    font-size: 16px;
+    color: var(--color-gris);
+    border-right: 1px solid var(--color-gris-5b);
+}
+main .buscador input:focus{
+    border:none;
+    outline: none; /* es para que al seleccionar el label no se ponga el borde naranja */
 }
